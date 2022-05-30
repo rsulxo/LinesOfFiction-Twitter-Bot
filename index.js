@@ -7,7 +7,7 @@ const randomQuote = () => {
 }
 
 const job = new CronJob(
-    '0 0 12 * * *',
+    '0 */12 * * *',
     () => {
         const createdTweet = client.tweet(randomQuote());
     },
